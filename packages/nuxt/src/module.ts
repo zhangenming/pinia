@@ -4,7 +4,7 @@
 import {
   defineNuxtModule,
   addPlugin,
-  isNuxt2,
+  isNuxtMajorVersion,
   addImports,
   createResolver,
   resolveModule,
@@ -54,7 +54,7 @@ const module: NuxtModule<ModuleOptions> = defineNuxtModule<ModuleOptions>({
       nuxt.options.features &&
       // ts
       options.disableVuex &&
-      isNuxt2()
+      isNuxtMajorVersion(2, nuxt)
     ) {
       // @ts-expect-error: no `store` feature flag in nuxt v3
       nuxt.options.features.store = false
@@ -63,13 +63,16 @@ const module: NuxtModule<ModuleOptions> = defineNuxtModule<ModuleOptions>({
     // Transpile runtime
     nuxt.options.build.transpile.push(resolve(runtimeDir))
 
-    // Make sure we use the mjs build for pinia
-    nuxt.options.alias.pinia =
-      nuxt.options.alias.pinia ||
-      // FIXME: remove this deprecated call. Ensure it works in Nuxt 2 to 3
-      resolveModule('pinia/dist/pinia.mjs', {
-        paths: [nuxt.options.rootDir, import.meta.url],
-      })
+    // This alias broke in Nuxt 3 so only add it in Nuxt 2
+    if (isNuxtMajorVersion(2, nuxt)) {
+      // Make sure we use the mjs build for pinia
+      nuxt.options.alias.pinia =
+        nuxt.options.alias.pinia ||
+        // FIXME: remove this deprecated call. Ensure it works in Nuxt 2 to 3
+        resolveModule('pinia/dist/pinia.mjs', {
+          paths: [nuxt.options.rootDir, import.meta.url],
+        })
+    }
 
     nuxt.hook('prepare:types', ({ references }) => {
       references.push({ types: '@pinia/nuxt' })
@@ -78,7 +81,7 @@ const module: NuxtModule<ModuleOptions> = defineNuxtModule<ModuleOptions>({
     // Add runtime plugin before the router plugin
     // https://github.com/nuxt/framework/issues/9130
     nuxt.hook('modules:done', () => {
-      if (isNuxt2()) {
+      if (isNuxtMajorVersion(2, nuxt)) {
         addPlugin(resolve(runtimeDir, 'plugin.vue2'))
       } else {
         addPlugin(resolve(runtimeDir, 'plugin.vue3'))
