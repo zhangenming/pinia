@@ -1,3 +1,14 @@
+# [0.6.0](https://github.com/vuejs/pinia/compare/@pinia/nuxt@0.5.5...@pinia/nuxt@0.6.0) (2024-10-29)
+
+### Bug Fixes
+
+- avoid broken alias ([65031ee](https://github.com/vuejs/pinia/commit/65031ee77ed46a34bc2359223e24c7944e840819))
+- **nuxt:** ensure payload plugin declaration is generated ([#2806](https://github.com/vuejs/pinia/issues/2806)) ([99ab76c](https://github.com/vuejs/pinia/commit/99ab76c685405a93f7fc41b335fe5710e9b7fee8))
+
+### Features
+
+- **nuxt:** do not serialize skipHydrate properties ([e645fc1](https://github.com/vuejs/pinia/commit/e645fc12ea115a2d2cc395ad83e4cc3df350c4ea))
+
 ## [0.5.5](https://github.com/vuejs/pinia/compare/@pinia/nuxt@0.5.4...@pinia/nuxt@0.5.5) (2024-09-30)
 
 No changes in this release

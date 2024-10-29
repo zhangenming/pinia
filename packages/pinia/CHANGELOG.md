@@ -1,3 +1,16 @@
+## [2.2.5](https://github.com/vuejs/pinia/compare/pinia@2.2.4...pinia@2.2.5) (2024-10-29)
+
+### Bug Fixes
+
+- keep no side effect comment when minifying ([a31fb87](https://github.com/vuejs/pinia/commit/a31fb877aed1843fc144d09488e2b45afc917bf9))
+- reference the store directly in storeToRefs to ensure correct reactivity after HMR ([#2795](https://github.com/vuejs/pinia/issues/2795)) ([254eec7](https://github.com/vuejs/pinia/commit/254eec764ecccd120ab9dbc31352d76ffd6ecfa3))
+- **types:** handle union types in generic parameter ([#2794](https://github.com/vuejs/pinia/issues/2794)) ([ecc7449](https://github.com/vuejs/pinia/commit/ecc74492c642539ffc7386d57a8f9853437be327)), closes [#2785](https://github.com/vuejs/pinia/issues/2785)
+- up minimum peer dep of Vue ([5404d3e](https://github.com/vuejs/pinia/commit/5404d3e472ed0ac8ba0f09f501618908fe438c57)), closes [#2797](https://github.com/vuejs/pinia/issues/2797)
+
+### Features
+
+- **nuxt:** do not serialize skipHydrate properties ([e645fc1](https://github.com/vuejs/pinia/commit/e645fc12ea115a2d2cc395ad83e4cc3df350c4ea))
+
 ## [2.2.4](https://github.com/vuejs/pinia/compare/pinia@2.2.3...pinia@2.2.4) (2024-10-01)
 
 ### Bug Fixes
