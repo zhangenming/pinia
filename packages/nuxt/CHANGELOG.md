@@ -1,3 +1,9 @@
+## [0.6.1](https://github.com/vuejs/pinia/compare/@pinia/nuxt@0.6.0...@pinia/nuxt@0.6.1) (2024-10-31)
+
+### Bug Fixes
+
+- upgrade minimum version for nuxt kit ([3dab0a6](https://github.com/vuejs/pinia/commit/3dab0a6a43f00d7a52d62d53748c7d5e0cb061ea)), closes [#2814](https://github.com/vuejs/pinia/issues/2814)
+
 # [0.6.0](https://github.com/vuejs/pinia/compare/@pinia/nuxt@0.5.5...@pinia/nuxt@0.6.0) (2024-10-29)
 
 ### Bug Fixes
