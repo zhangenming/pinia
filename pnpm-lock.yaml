@@ -97,11 +97,11 @@ importers:
         specifier: ^2.11.1
         version: 2.11.1
       typedoc:
-        specifier: ^0.26.7
-        version: 0.26.7(typescript@5.6.3)
+        specifier: ^0.26.11
+        version: 0.26.11(typescript@5.6.3)
       typedoc-plugin-markdown:
-        specifier: ^4.2.8
-        version: 4.2.8(typedoc@0.26.7(typescript@5.6.3))
+        specifier: ^4.2.10
+        version: 4.2.10(typedoc@0.26.11(typescript@5.6.3))
       typescript:
         specifier: ~5.6.3
         version: 5.6.3
@@ -208,8 +208,8 @@ importers:
         version: 0.14.10(@vue/composition-api@1.7.2(vue@3.5.12(typescript@5.6.3)))(vue@3.5.12(typescript@5.6.3))
     devDependencies:
       '@microsoft/api-extractor':
-        specifier: 7.47.9
-        version: 7.47.9(@types/node@22.8.7)
+        specifier: 7.47.11
+        version: 7.47.11(@types/node@22.8.7)
       '@vue/test-utils':
         specifier: ^2.4.6
         version: 2.4.6
@@ -1147,10 +1147,6 @@ packages:
     resolution: {integrity: sha512-lrudfbPub5wzBhymfFtgZKuBvXxoSIAdrvS2UbHjoMT2TjIEddq6Z13pcve7A03BAouw0x8sW8G4txdgfiSwpQ==}
     hasBin: true
 
-  '@microsoft/api-extractor@7.47.9':
-    resolution: {integrity: sha512-TTq30M1rikVsO5wZVToQT/dGyJY7UXJmjiRtkHPLb74Prx3Etw8+bX7Bv7iLuby6ysb7fuu1NFWqma+csym8Jw==}
-    hasBin: true
-
   '@microsoft/tsdoc-config@0.17.0':
     resolution: {integrity: sha512-v/EYRXnCAIHxOHW+Plb6OWuUoMotxTN0GLatnpOb1xq0KuTNw/WI3pamJx/UbsoJP5k9MCw1QxvvhPcF9pH3Zg==}
 
@@ -1569,9 +1565,6 @@ packages:
     peerDependenciesMeta:
       '@types/node':
         optional: true
-
-  '@rushstack/ts-command-line@4.22.8':
-    resolution: {integrity: sha512-XbFjOoV7qZHJnSuFUHv0pKaFA4ixyCuki+xMjsMfDwfvQjs5MYG0IK5COal3tRnG7KCDe2l/G+9LrzYE/RJhgg==}
 
   '@rushstack/ts-command-line@4.23.0':
     resolution: {integrity: sha512-jYREBtsxduPV6ptNq8jOKp9+yx0ld1Tb/Tkdnlj8gTjazl1sF3DwX2VbluyYrNd0meWIL0bNeer7WDf5tKFjaQ==}
@@ -4843,14 +4836,14 @@ packages:
   type-level-regexp@0.1.17:
     resolution: {integrity: sha512-wTk4DH3cxwk196uGLK/E9pE45aLfeKJacKmcEgEOA/q5dnPGNxXt0cfYdFxb57L+sEpf1oJH4Dnx/pnRcku9jg==}
 
-  typedoc-plugin-markdown@4.2.8:
-    resolution: {integrity: sha512-1EDsc66jaCjZtxdYy+Rl0KDU1WY/iyuCOOPaeFzcYFZ81FNXV8CmgUDOHri20WGmYnkEM5nQ+ooxj1vyuQo0Lg==}
+  typedoc-plugin-markdown@4.2.10:
+    resolution: {integrity: sha512-PLX3pc1/7z13UJm4TDE9vo9jWGcClFUErXXtd5LdnoLjV6mynPpqZLU992DwMGFSRqJFZeKbVyqlNNeNHnk2tQ==}
     engines: {node: '>= 18'}
     peerDependencies:
       typedoc: 0.26.x
 
-  typedoc@0.26.7:
-    resolution: {integrity: sha512-gUeI/Wk99vjXXMi8kanwzyhmeFEGv1LTdTQsiyIsmSYsBebvFxhbcyAx7Zjo4cMbpLGxM4Uz3jVIjksu/I2v6Q==}
+  typedoc@0.26.11:
+    resolution: {integrity: sha512-sFEgRRtrcDl2FxVP58Ze++ZK2UQAEvtvvH8rRlig1Ja3o7dDaMHmaBfvJmdGnNEFaLTpQsN8dpvZaTqJSu/Ugw==}
     engines: {node: '>= 18'}
     hasBin: true
     peerDependencies:
@@ -6120,7 +6113,7 @@ snapshots:
       - '@types/node'
     optional: true
 
-  '@microsoft/api-extractor@7.47.9(@types/node@22.8.7)':
+  '@microsoft/api-extractor@7.47.11(@types/node@22.8.7)':
     dependencies:
       '@microsoft/api-extractor-model': 7.29.8(@types/node@22.8.7)
       '@microsoft/tsdoc': 0.15.0
@@ -6128,7 +6121,7 @@ snapshots:
       '@rushstack/node-core-library': 5.9.0(@types/node@22.8.7)
       '@rushstack/rig-package': 0.5.3
       '@rushstack/terminal': 0.14.2(@types/node@22.8.7)
-      '@rushstack/ts-command-line': 4.22.8(@types/node@22.8.7)
+      '@rushstack/ts-command-line': 4.23.0(@types/node@22.8.7)
       lodash: 4.17.21
       minimatch: 3.0.8
       resolve: 1.22.8
@@ -6754,15 +6747,6 @@ snapshots:
     optionalDependencies:
       '@types/node': 22.8.7
 
-  '@rushstack/ts-command-line@4.22.8(@types/node@22.8.7)':
-    dependencies:
-      '@rushstack/terminal': 0.14.2(@types/node@22.8.7)
-      '@types/argparse': 1.0.38
-      argparse: 1.0.10
-      string-argv: 0.3.2
-    transitivePeerDependencies:
-      - '@types/node'
-
   '@rushstack/ts-command-line@4.23.0(@types/node@20.14.12)':
     dependencies:
       '@rushstack/terminal': 0.14.2(@types/node@20.14.12)
@@ -6772,6 +6756,15 @@ snapshots:
     transitivePeerDependencies:
       - '@types/node'
     optional: true
+
+  '@rushstack/ts-command-line@4.23.0(@types/node@22.8.7)':
+    dependencies:
+      '@rushstack/terminal': 0.14.2(@types/node@22.8.7)
+      '@types/argparse': 1.0.38
+      argparse: 1.0.10
+      string-argv: 0.3.2
+    transitivePeerDependencies:
+      - '@types/node'
 
   '@sec-ant/readable-stream@0.4.1': {}
 
@@ -10440,11 +10433,11 @@ snapshots:
 
   type-level-regexp@0.1.17: {}
 
-  typedoc-plugin-markdown@4.2.8(typedoc@0.26.7(typescript@5.6.3)):
+  typedoc-plugin-markdown@4.2.10(typedoc@0.26.11(typescript@5.6.3)):
     dependencies:
-      typedoc: 0.26.7(typescript@5.6.3)
+      typedoc: 0.26.11(typescript@5.6.3)
 
-  typedoc@0.26.7(typescript@5.6.3):
+  typedoc@0.26.11(typescript@5.6.3):
     dependencies:
       lunr: 2.3.9
       markdown-it: 14.1.0
