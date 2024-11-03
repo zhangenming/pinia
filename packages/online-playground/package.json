@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.4",
-    "execa": "^9.3.0",
+    "execa": "^9.5.1",
     "vite": "^5.4.10"
   },
   "dependencies": {
