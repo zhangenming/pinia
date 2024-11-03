@@ -29,9 +29,9 @@
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^5.1.0",
-    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-commonjs": "^28.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-replace": "^5.0.7",
+    "@rollup/plugin-replace": "^6.0.1",
     "@rollup/plugin-terser": "^0.4.4",
     "@types/lodash.kebabcase": "^4.1.9",
     "@types/node": "^20.14.12",
