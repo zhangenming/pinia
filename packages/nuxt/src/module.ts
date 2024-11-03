@@ -7,7 +7,6 @@ import {
   isNuxtMajorVersion,
   addImports,
   createResolver,
-  resolveModule,
   addImportsDir,
 } from '@nuxt/kit'
 import type { NuxtModule } from '@nuxt/schema'
@@ -63,15 +62,11 @@ const module: NuxtModule<ModuleOptions> = defineNuxtModule<ModuleOptions>({
     // Transpile runtime
     nuxt.options.build.transpile.push(resolve(runtimeDir))
 
-    // This alias broke in Nuxt 3 so only add it in Nuxt 2
-    if (isNuxtMajorVersion(2, nuxt)) {
-      // Make sure we use the mjs build for pinia
-      nuxt.options.alias.pinia =
-        nuxt.options.alias.pinia ||
-        // FIXME: remove this deprecated call. Ensure it works in Nuxt 2 to 3
-        resolveModule('pinia/dist/pinia.mjs', {
-          paths: [nuxt.options.rootDir, import.meta.url],
-        })
+    // avoids having multiple copies of pinia
+    nuxt.options.vite.optimizeDeps ??= {}
+    nuxt.options.vite.optimizeDeps.exclude ??= []
+    if (!nuxt.options.vite.optimizeDeps.exclude.includes('pinia')) {
+      nuxt.options.vite.optimizeDeps.exclude.push('pinia')
     }
 
     nuxt.hook('prepare:types', ({ references }) => {
