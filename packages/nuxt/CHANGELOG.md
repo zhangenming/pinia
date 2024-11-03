@@ -1,3 +1,9 @@
+# [0.7.0](https://github.com/vuejs/pinia/compare/@pinia/nuxt@0.6.1...@pinia/nuxt@0.7.0) (2024-11-03)
+
+### Bug Fixes
+
+- dedupe pinia ([#2821](https://github.com/vuejs/pinia/issues/2821)) ([90d8eb9](https://github.com/vuejs/pinia/commit/90d8eb900071964388c54d579ffc84c8ef01c191))
+
 ## [0.6.1](https://github.com/vuejs/pinia/compare/@pinia/nuxt@0.6.0...@pinia/nuxt@0.6.1) (2024-10-31)
 
 ### Bug Fixes

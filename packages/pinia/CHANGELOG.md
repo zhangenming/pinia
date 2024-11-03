@@ -1,3 +1,7 @@
+## [2.2.6](https://github.com/vuejs/pinia/compare/pinia@2.2.5...pinia@2.2.6) (2024-11-03)
+
+No code changes in this release
+
 ## [2.2.5](https://github.com/vuejs/pinia/compare/pinia@2.2.4...pinia@2.2.5) (2024-10-29)
 
 ### Bug Fixes
