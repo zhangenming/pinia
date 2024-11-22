@@ -16,7 +16,7 @@
     "@chenfengyuan/vue-countdown": "^2.1.2",
     "@vueuse/core": "^11.2.0",
     "pinia": "workspace:*",
-    "vitepress": "1.4.5",
+    "vitepress": "1.5.0",
     "vitepress-translation-helper": "^0.2.1",
     "vue-use-spring": "^0.3.3"
   }
