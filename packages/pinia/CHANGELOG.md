@@ -1,3 +1,9 @@
+### [2.2.7](https://github.com/vuejs/pinia/compare/pinia@2.2.6...pinia@2.2.7) (2024-11-27)
+
+### Bug Fixes
+
+- **devtools:** avoid running outside of browsers ([eb5e6fd](https://github.com/vuejs/pinia/commit/eb5e6fd6073da8e828a9087c876d0e8fde3cdb3d)), closes [#2843](https://github.com/vuejs/pinia/issues/2843)
+
 ## [2.2.6](https://github.com/vuejs/pinia/compare/pinia@2.2.5...pinia@2.2.6) (2024-11-03)
 
 No code changes in this release
