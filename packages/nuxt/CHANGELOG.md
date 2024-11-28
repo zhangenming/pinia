@@ -1,5 +1,15 @@
 ## [0.8.0](https://github.com/vuejs/pinia/compare/@pinia/nuxt@0.7.0...@pinia/nuxt@0.8.0) (2024-11-28)
 
+This release partially fixes a bug in production of:
+
+> vueDemi2.effectScope is not a function
+
+The remaining part in in [nypm](https://github.com/unjs/nypm/pull/165). In the meantime, you will have to manually add `pinia` with your favorite package manager:
+
+```sh
+pnpm i pinia
+```
+
 ### Bug Fixes
 
 - allow module to install pinia alongside ([#2846](https://github.com/vuejs/pinia/issues/2846)) ([3e8ed69](https://github.com/vuejs/pinia/commit/3e8ed69addc30954b887241faed8778048e5d20e))

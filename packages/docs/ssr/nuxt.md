@@ -13,6 +13,8 @@ Using Pinia with [Nuxt](https://nuxt.com/) is easier since Nuxt takes care of a 
 npx nuxi@latest module add pinia
 ```
 
+This will add both `@pinia/nuxt` and `pinia` to your project. **If you notice that `pinia` is not installed, please install it manually** with your package manager: `npm i pinia`.
+
 :::tip
 If you're using npm, you might encounter an _ERESOLVE unable to resolve dependency tree_ error. In that case, add the following to your `package.json`:
 
