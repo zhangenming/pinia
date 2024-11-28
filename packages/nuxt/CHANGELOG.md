@@ -1,3 +1,9 @@
+## [0.8.0](https://github.com/vuejs/pinia/compare/@pinia/nuxt@0.7.0...@pinia/nuxt@0.8.0) (2024-11-28)
+
+### Bug Fixes
+
+- allow module to install pinia alongside ([#2846](https://github.com/vuejs/pinia/issues/2846)) ([3e8ed69](https://github.com/vuejs/pinia/commit/3e8ed69addc30954b887241faed8778048e5d20e))
+
 # [0.7.0](https://github.com/vuejs/pinia/compare/@pinia/nuxt@0.6.1...@pinia/nuxt@0.7.0) (2024-11-03)
 
 ### Bug Fixes
