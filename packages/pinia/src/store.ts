@@ -841,6 +841,8 @@ export function defineStore<
  * Creates a `useStore` function that retrieves the store instance
  *
  * @param options - options to define the store
+ *
+ * @deprecated use `defineStore(id, options)` instead
  */
 export function defineStore<
   Id extends string,
