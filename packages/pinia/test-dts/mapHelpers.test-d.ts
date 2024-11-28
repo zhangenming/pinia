@@ -5,7 +5,6 @@ import {
   mapActions,
   mapState,
   mapWritableState,
-  TypeEqual,
 } from './'
 import { describe, it, expectTypeOf } from 'vitest'
 
