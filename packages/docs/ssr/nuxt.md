@@ -64,17 +64,17 @@ await useAsyncData('user', () => store.fetchUser().then(() => true))
 
 ::: tip
 
-If you want to use a store outside of `setup()`, remember to pass the `pinia` object to `useStore()`. We added it to [the context](https://nuxtjs.org/docs/2.x/internals-glossary/context) so you have access to it in `asyncData()` and `fetch()`:
+If you want to use a store outside of `setup()` or an _injection aware_ context (e.g. Navigation guards, other stores, Nuxt Middlewares, etc), remember to pass the `pinia` instance to `useStore()`, for the reasons alluded to [here](https://pinia.vuejs.org/core-concepts/outside-component-usage.html#SSR-Apps). Retrieving the `pinia` instance might vary.
 
-```js
+```ts
 import { useStore } from '~/stores/myStore'
 
-export default {
-  asyncData({ $pinia }) {
-    const store = useStore($pinia)
-  },
-}
+// this line is usually inside a function that is able to retrieve
+// the pinia instance
+const store = useStore(pinia)
 ```
+
+Fortunately, most of the time you **don't need to go through this hassle**.
 
 :::
 
