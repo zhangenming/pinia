@@ -1,4 +1,4 @@
-import type { ComponentPublicInstance, ComputedRef } from 'vue-demi'
+import type { ComponentPublicInstance, ComputedRef, UnwrapRef } from 'vue-demi'
 import type {
   _GettersTree,
   _Method,
@@ -431,7 +431,7 @@ export function mapActions<
 /**
  * For internal use **only**
  */
-export type _MapWritableStateReturn<S extends StateTree> = {
+export type _MapWritableStateReturn<S> = {
   [key in keyof S]: {
     get: () => S[key]
     set: (value: S[key]) => any
@@ -442,7 +442,7 @@ export type _MapWritableStateReturn<S extends StateTree> = {
  * For internal use **only**
  */
 export type _MapWritableStateObjectReturn<
-  S extends StateTree,
+  S,
   T extends Record<string, keyof S>,
 > = {
   [key in keyof T]: {
@@ -464,11 +464,11 @@ export function mapWritableState<
   S extends StateTree,
   G extends _GettersTree<S>,
   A,
-  KeyMapper extends Record<string, keyof S>,
+  KeyMapper extends Record<string, keyof UnwrapRef<S>>,
 >(
   useStore: StoreDefinition<Id, S, G, A>,
   keyMapper: KeyMapper
-): _MapWritableStateObjectReturn<S, KeyMapper>
+): _MapWritableStateObjectReturn<UnwrapRef<S>, KeyMapper>
 /**
  * Allows using state and getters from one store without using the composition
  * API (`setup()`) by generating an object to be spread in the `computed` field
@@ -482,16 +482,11 @@ export function mapWritableState<
   S extends StateTree,
   G extends _GettersTree<S>,
   A,
-  Keys extends keyof S,
+  Keys extends keyof UnwrapRef<S>,
 >(
   useStore: StoreDefinition<Id, S, G, A>,
   keys: readonly Keys[]
-): {
-  [K in Keys]: {
-    get: () => S[K]
-    set: (value: S[K]) => any
-  }
-}
+): Pick<_MapWritableStateReturn<UnwrapRef<S>>, Keys>
 /**
  * Allows using state and getters from one store without using the composition
  * API (`setup()`) by generating an object to be spread in the `computed` field

@@ -130,6 +130,20 @@ mapWritableState(useOptionsStore, ['upper'])
 // @ts-expect-error: cannot use a getter
 mapWritableState(useOptionsStore, { up: 'upper' })
 
+expectType<{
+  foo: {
+    get: () => 'on' | 'off'
+    set: (v: 'on' | 'off') => any
+  }
+}>(mapWritableState(useSetupStore, { foo: 'a' }))
+
+expectType<{
+  a: {
+    get: () => 'on' | 'off'
+    set: (v: 'on' | 'off') => any
+  }
+}>(mapWritableState(useSetupStore, ['a']))
+
 const setupStoreWithState = mapState(useSetupStore, ['a'])
 
 // store with no getters
