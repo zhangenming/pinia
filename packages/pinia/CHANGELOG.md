@@ -9,12 +9,6 @@
 - avoid immediate computing with `storeToRefs` ([67d3109](https://github.com/vuejs/pinia/commit/67d31094784cc3bd256b0636b79dc8e421f6c3fb)), closes [#2812](https://github.com/vuejs/pinia/issues/2812)
 - **types:** unwrap refs in `mapWritableState` for setup stores ([#2805](https://github.com/vuejs/pinia/issues/2805)) ([ea14e53](https://github.com/vuejs/pinia/commit/ea14e53fdfc0d0f4cd80d5242572f87714a77e3b)), closes [#2804](https://github.com/vuejs/pinia/issues/2804)
 
-### 2.2.7 (2024-11-27)
-
-### Bug Fixes
-
-- **devtools:** avoid running outside of browsers ([eb5e6fd](https://github.com/vuejs/pinia/commit/eb5e6fd6073da8e828a9087c876d0e8fde3cdb3d)), closes [#2843](https://github.com/vuejs/pinia/issues/2843)
-
 ### [2.2.7](https://github.com/vuejs/pinia/compare/pinia@2.2.6...pinia@2.2.7) (2024-11-27)
 
 ### Bug Fixes
