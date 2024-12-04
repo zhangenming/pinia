@@ -1,4 +1,5 @@
 import type { DefaultTheme, LocaleSpecificConfig } from 'vitepress'
+import typedocSidebar from '../../api/typedoc-sidebar.json'
 
 export const META_URL = 'https://pinia.vuejs.org'
 export const META_TITLE = 'Pinia 🍍'
@@ -53,18 +54,8 @@ export const enConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
     sidebar: {
       '/api/': [
         {
-          text: 'packages',
-          items: [
-            { text: 'pinia', link: '/api/pinia/' },
-            {
-              text: '@pinia/nuxt',
-              link: '/api/@pinia/nuxt/',
-            },
-            {
-              text: '@pinia/testing',
-              link: '/api/@pinia/testing/',
-            },
-          ],
+          text: 'API',
+          items: typedocSidebar,
         },
       ],
       // catch-all fallback
