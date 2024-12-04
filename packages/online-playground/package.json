@@ -9,9 +9,9 @@
     "serve": "vite preview"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.2.0",
+    "@vitejs/plugin-vue": "^5.2.1",
     "execa": "^9.5.1",
-    "vite": "^5.4.11"
+    "vite": "^6.0.2"
   },
   "dependencies": {
     "@vue/repl": "^3.0.0",
