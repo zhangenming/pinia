@@ -10,8 +10,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.1",
-    "execa": "^9.5.1",
-    "vite": "^6.0.2"
+    "execa": "^9.5.2",
+    "vite": "^6.0.7"
   },
   "dependencies": {
     "@vue/repl": "^3.0.0",
