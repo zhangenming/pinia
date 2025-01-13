@@ -61,8 +61,8 @@ importers:
         specifier: ^14.0.1
         version: 14.0.2
       happy-dom:
-        specifier: ^15.11.7
-        version: 15.11.7
+        specifier: ^16.5.3
+        version: 16.5.3
       lint-staged:
         specifier: ^15.3.0
         version: 15.3.0
@@ -107,7 +107,7 @@ importers:
         version: 5.6.3
       vitest:
         specifier: ^2.1.8
-        version: 2.1.8(@types/node@22.10.1)(@vitest/ui@2.1.8)(happy-dom@15.11.7)(terser@5.36.0)
+        version: 2.1.8(@types/node@22.10.1)(@vitest/ui@2.1.8)(happy-dom@16.5.3)(terser@5.36.0)
       vue:
         specifier: ~3.5.13
         version: 3.5.13(typescript@5.6.3)
@@ -3253,6 +3253,10 @@ packages:
 
   happy-dom@15.11.7:
     resolution: {integrity: sha512-KyrFvnl+J9US63TEzwoiJOQzZBJY7KgBushJA8X61DMbNsH+2ONkDuLDnCnwUiPTF42tLoEmrPyoqbenVA5zrg==}
+    engines: {node: '>=18.0.0'}
+
+  happy-dom@16.5.3:
+    resolution: {integrity: sha512-7zGnyROZuntn+5X84MQ535qiQ3ccm45uHl+Q7EFAcPP0NhkbrfPitqprz0GgszX91/QqsZKQ7nTYkyObCTDUjg==}
     engines: {node: '>=18.0.0'}
 
   hard-rejection@2.1.0:
@@ -7372,7 +7376,7 @@ snapshots:
       std-env: 3.8.0
       test-exclude: 7.0.1
       tinyrainbow: 1.2.0
-      vitest: 2.1.8(@types/node@22.10.1)(@vitest/ui@2.1.8)(happy-dom@15.11.7)(terser@5.36.0)
+      vitest: 2.1.8(@types/node@22.10.1)(@vitest/ui@2.1.8)(happy-dom@16.5.3)(terser@5.36.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -8904,6 +8908,12 @@ snapshots:
   happy-dom@15.11.7:
     dependencies:
       entities: 4.5.0
+      webidl-conversions: 7.0.0
+      whatwg-mimetype: 3.0.0
+    optional: true
+
+  happy-dom@16.5.3:
+    dependencies:
       webidl-conversions: 7.0.0
       whatwg-mimetype: 3.0.0
 
@@ -11385,6 +11395,43 @@ snapshots:
       '@types/node': 22.10.1
       '@vitest/ui': 2.1.8(vitest@2.1.8)
       happy-dom: 15.11.7
+    transitivePeerDependencies:
+      - less
+      - lightningcss
+      - msw
+      - sass
+      - sass-embedded
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+
+  vitest@2.1.8(@types/node@22.10.1)(@vitest/ui@2.1.8)(happy-dom@16.5.3)(terser@5.36.0):
+    dependencies:
+      '@vitest/expect': 2.1.8
+      '@vitest/mocker': 2.1.8(vite@5.4.11(@types/node@22.10.1)(terser@5.36.0))
+      '@vitest/pretty-format': 2.1.8
+      '@vitest/runner': 2.1.8
+      '@vitest/snapshot': 2.1.8
+      '@vitest/spy': 2.1.8
+      '@vitest/utils': 2.1.8
+      chai: 5.1.2
+      debug: 4.3.7
+      expect-type: 1.1.0
+      magic-string: 0.30.14
+      pathe: 1.1.2
+      std-env: 3.8.0
+      tinybench: 2.9.0
+      tinyexec: 0.3.1
+      tinypool: 1.0.2
+      tinyrainbow: 1.2.0
+      vite: 5.4.11(@types/node@22.10.1)(terser@5.36.0)
+      vite-node: 2.1.8(@types/node@22.10.1)(terser@5.36.0)
+      why-is-node-running: 2.3.0
+    optionalDependencies:
+      '@types/node': 22.10.1
+      '@vitest/ui': 2.1.8(vitest@2.1.8)
+      happy-dom: 16.5.3
     transitivePeerDependencies:
       - less
       - lightningcss
