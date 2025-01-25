@@ -133,6 +133,8 @@ export function createTestingPinia({
     )
   } else if (
     typeof createSpy !== 'function' ||
+    // When users pass vi.fn() instead of vi.fn
+    // https://github.com/vuejs/pinia/issues/2896
     'mockReturnValue' in createSpy
   ) {
     throw new Error(
